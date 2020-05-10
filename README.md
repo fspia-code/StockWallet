@@ -1,27 +1,22 @@
-# StockWallet
+# StockWallet Project Outline
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+## Overview: 
+This is a fun little project I'm working on to track certain stocks that I may be holding and keep track of profit and losses. The main purpose is to practice using certain technologies such as NodeJS and Angular.
 
-## Development server
+As a business graduate, I am fascinated by the stock market. During my studies, I realize there is a need for easily accessible websites that provide financial information and also keep track of the transactions.
+On this website people will find financial information as well as keep track of their stock transactions.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features: 
+ 1. Stock Tracker: User can track their stock prices.
+ 2. Logging Account: User can create their own account. 
+ 3. Manage Account: User can save their transactions.
 
-## Code scaffolding
+## Technologies: 
+This will be aa angular project.
+Also, other technologies will be used like:
+1. Bootstrap,
+2. Sass,
+3. TypeScript,
+4. Fontawesome,
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## What you’ll have to learn: 
