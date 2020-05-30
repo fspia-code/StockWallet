@@ -3,24 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DefaultComponent } from './layouts/default/default.component';
-import { HomeComponent } from './modules/home/home.component';
-import { StockviewerComponent } from './modules/stockviewer/stockviewer.component';
-import { AccountComponent } from './modules/account/account.component';
+import { DefaultModule } from './layouts/default/default.module';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefaultComponent,
-    HomeComponent,
-    StockviewerComponent,
-    AccountComponent,
-    
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DefaultModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
