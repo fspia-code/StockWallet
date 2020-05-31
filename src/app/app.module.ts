@@ -4,22 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    FooterComponent, 
+    AppComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DefaultModule  
+    DefaultModule,
+    FullwidthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

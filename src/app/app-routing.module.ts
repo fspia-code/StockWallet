@@ -4,6 +4,8 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { HomeComponent } from './modules/home/home.component';
 import { StockviewerComponent } from './modules/stockviewer/stockviewer.component';
 import { AccountComponent } from './modules/account/account.component';
+import { FullwidthComponent } from './layouts/fullwidth/fullwidth.component';
+import { LoginComponent } from './modules/login/login.component';
 
 
 const routes: Routes = [{
@@ -12,16 +14,27 @@ const routes: Routes = [{
   children: [{
     path: '',
     component: HomeComponent
-  }, {
+  }, 
+  {
     path: 'stockviewer',
     component: StockviewerComponent
   },
   {
     path: 'account',
     component: AccountComponent
-  },  
-  ]
-
+  }]
+},
+ 
+  {
+    path: '',
+    component: FullwidthComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginComponent,
+      },
+    ]  
+  
 }];
 
 @NgModule({
