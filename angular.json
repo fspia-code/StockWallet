@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "StockWallet"
+    }
+  },
+  "defaultProject": "StockWallet",
+  "cli": {
+    "analytics": false
+  }
 }
