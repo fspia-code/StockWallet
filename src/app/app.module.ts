@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DefaultModule } from './layouts/default/default.module';
 import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
 import { StockbodyComponent } from './modules/stockviewer/stockbody/stockbody.component';
+import { StocklistComponent } from './modules/stockviewer/stocklist/stocklist.component';
 
 
 
@@ -13,7 +14,8 @@ import { StockbodyComponent } from './modules/stockviewer/stockbody/stockbody.co
 @NgModule({
   declarations: [
     AppComponent,
-    StockbodyComponent 
+    StockbodyComponent,
+    StocklistComponent 
   ],
   imports: [
     BrowserModule,
