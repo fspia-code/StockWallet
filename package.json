@@ -21,7 +21,12 @@
     "@angular/platform-browser": "~9.1.9",
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
+    "@types/highcharts": "^7.0.0",
+    "bootstrap": "^3.4.1",
+    "highcharts": "^8.1.1",
     "rxjs": "~6.5.5",
+    "save": "^2.4.0",
+    "save-dev": "0.0.1-security",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.3"
   },

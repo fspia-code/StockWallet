@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AccountComponent } from './../../modules/account/account.component';
 import { StockviewerComponent } from './../../modules/stockviewer/stockviewer.component';
 import { HomeComponent } from './../../modules/home/home.component';
+import { StocklistComponent } from 'src/app/modules/stockviewer/stocklist/stocklist.component';
+import { StockbodyComponent } from 'src/app/modules/stockviewer/stockbody/stockbody.component';
 
 
 
@@ -17,7 +19,9 @@ import { HomeComponent } from './../../modules/home/home.component';
     DefaultComponent,
     HomeComponent,
     StockviewerComponent,
-    AccountComponent
+    AccountComponent,
+    StockbodyComponent,
+    StocklistComponent 
   ],
   imports: [
     CommonModule,
