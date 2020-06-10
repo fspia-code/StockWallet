@@ -1,9 +1,125 @@
 import { Injectable } from '@angular/core';
+import * as Highcharts from 'highcharts';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ChartdataService {
+@Injectable()
 
-  constructor() { }
+export class ChartDataService
+{
+  apikey = 'GA98M26OCG6SI19X';
+  charts = [];
+
+  constructor(private http:  HttpClient)
+  {
+
+  }
+
+  createChart(container, symbol, data = null)
+  {
+    let e = document.createElement("div");
+
+    container.appendChild(e);
+
+    let options: any = this.transformConfiguration(symbol, data);
+
+    if(options.chart != null)
+    {
+      options.chart['renderTo'] = e;
+    }
+    else
+    {
+      options.chart = {
+        'renderTo': e
+      };
+    }
+
+    this.charts.push(new Highcharts.Chart(options));
+  }
+
+  getCharts()
+  {
+    return this.charts;
+  }
+
+  /**
+  * Retrieve Chart Intra Day
+  */
+  chartIntraDay(symbol, data)
+  {
+    var config = {
+      chart: { type: 'spline' },
+      title : { text : symbol },
+      xAxis: {
+          type: 'datetime'
+      },
+      series: [{
+        name: symbol,
+        data: data
+      }],
+      rangeSelector: {
+          buttons: [{
+              type: 'hour',
+              count: 1,
+              text: '1h'
+          }, {
+              type: 'day',
+              count: 1,
+              text: '1D'
+          }, {
+              type: 'all',
+              count: 1,
+              text: 'All'
+          }],
+          selected: 1,
+          inputEnabled: false
+      }
+    };
+
+    return config;
+  };
+
+  transformConfiguration(symbol, data)
+  {
+    let chartConfig = this.chartIntraDay(symbol, data);
+
+    return chartConfig;
+  }
+
+  createStockQuery(tickerSymbol)
+  {
+    const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + tickerSymbol + '&interval=5min&apikey=' + this.apikey;
+
+    return encodeURI( url );
+  };
+
+  loadData(symbol, callback)
+  {
+    this.http.get(this.createStockQuery(symbol)).subscribe(this.onDataReceived.bind( this , symbol, callback));
+  };
+
+  onDataReceived(symbol, callback, rawData )
+  {
+    let highchartsData = this.transformDataForHighCharts( rawData );
+
+    callback(symbol, highchartsData);
+
+  };
+
+  transformDataForHighCharts( rawData )
+  {
+    let quotes = rawData['Time Series (5min)'],
+      data = [],
+      i, item;
+      
+    for (var each in quotes)
+    {
+      item = quotes[each];
+
+      data.push([new Date(each).getTime(),
+        parseFloat(item["4. close"])]);
+    }
+
+    return data;
+  };
+
 }

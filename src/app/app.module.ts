@@ -11,7 +11,8 @@ import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
     
   ],
   imports: [

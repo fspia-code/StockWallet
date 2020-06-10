@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { ChartdataService } from './../../modules/chartdata.service';
 import { SharedModule } from './../../shared/shared.module';
 import { RouterModule } from '@angular/router';
 
@@ -12,6 +11,8 @@ import { StockviewerComponent } from './../../modules/stockviewer/stockviewer.co
 import { HomeComponent } from './../../modules/home/home.component';
 import { StocklistComponent } from 'src/app/modules/stockviewer/stocklist/stocklist.component';
 import { StockbodyComponent } from 'src/app/modules/stockviewer/stockbody/stockbody.component';
+import { StockListItemComponent } from 'src/app/modules/stockviewer/stocklist/stocklist-item/stocklist-item.component';
+import { ChartDataService } from 'src/app/modules/chartdata.service';
 
 
 
@@ -22,14 +23,15 @@ import { StockbodyComponent } from 'src/app/modules/stockviewer/stockbody/stockb
     StockviewerComponent,
     AccountComponent,
     StockbodyComponent,
-    StocklistComponent 
+    StocklistComponent,
+    StockListItemComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
     SharedModule,
-    ChartdataService
+    ChartDataService
   ]
 })
 export class DefaultModule { }
