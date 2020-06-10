@@ -1,3 +1,4 @@
+import { ChartDataService } from './modules/chartdata.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -21,7 +22,7 @@ import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
     DefaultModule,
     FullwidthModule
   ],
-  providers: [],
+  providers: [ChartDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

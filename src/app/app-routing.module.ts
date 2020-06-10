@@ -1,3 +1,4 @@
+import { StockbodyComponent } from 'src/app/modules/stockviewer/stockbody/stockbody.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
@@ -17,7 +18,11 @@ const routes: Routes = [{
   }, 
   {
     path: 'stockviewer',
-    component: StockviewerComponent
+    component: StockviewerComponent,
+    children: [{
+      path: '',
+      component: StockbodyComponent,
+    }]
   },
   {
     path: 'account',
