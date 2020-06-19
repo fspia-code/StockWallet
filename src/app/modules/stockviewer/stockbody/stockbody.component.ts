@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, OnDestroy, ViewChild, ElementRef, Inp
 
 import * as Highcharts from 'highcharts';
 import { StockSymbol } from "../../models/stocksymbol";
-import { ChartDataService } from '../../chartdata.service';
+import { ChartDataService } from '../../../chartdata.service';
 
 @Component({
   selector: 'app-stockbody',

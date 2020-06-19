@@ -1,4 +1,4 @@
-import { ChartDataService } from './modules/chartdata.service';
+import { ChartDataService } from './chartdata.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,8 +13,6 @@ import { FullwidthModule } from './layouts/fullwidth/fullwidth.module';
 @NgModule({
   declarations: [
     AppComponent,
-   
-    
   ],
   imports: [
     BrowserModule,

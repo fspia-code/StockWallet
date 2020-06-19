@@ -11,11 +11,11 @@
     "src/main.ts",
     "src/polyfills.ts"
   ],
-  "include": [
+  // "include": [
     
-    "src/**/*.ts",
+  //   "src/**/*.ts",
     
-  ],
+  // ],
   // "enableIvy": false ,
   "exclude": [
     "src/test.ts",

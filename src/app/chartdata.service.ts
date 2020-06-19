@@ -4,8 +4,10 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 
-export class ChartDataService
-{
+export class ChartDataService  {
+  ngOninit() {
+
+  }
   apikey = 'GA98M26OCG6SI19X';
   charts = [];
 
