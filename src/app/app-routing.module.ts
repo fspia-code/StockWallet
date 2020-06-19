@@ -7,6 +7,7 @@ import { StockviewerComponent } from './modules/stockviewer/stockviewer.componen
 import { AccountComponent } from './modules/account/account.component';
 import { FullwidthComponent } from './layouts/fullwidth/fullwidth.component';
 import { LoginComponent } from './modules/login/login.component';
+import { StocklistComponent } from './modules/stockviewer/stocklist/stocklist.component';
 
 
 const routes: Routes = [{
@@ -22,7 +23,12 @@ const routes: Routes = [{
     children: [{
       path: '',
       component: StockbodyComponent,
-    }]
+    },
+    {
+      path: '',
+      component: StocklistComponent,
+    }
+  ]
   },
   {
     path: 'account',

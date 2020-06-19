@@ -1,11 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 
-export class ChartDataService
-{
+export class ChartDataService implements OnInit{
+
+  ngOnInit() {
+    
+  }
   apikey = 'GA98M26OCG6SI19X';
   charts = [];
 

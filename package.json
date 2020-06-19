@@ -51,5 +51,17 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.8.3"
-  }
+  },
+  "description": "## Overview:  This is a fun little project I'm working on to track the stocks that I am holding and to keep track of their profits and losses. The main purpose is to practice using specific web devolopment tools such as NodeJS and Angular.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fspia-code/StockWallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fspia-code/StockWallet/issues"
+  },
+  "homepage": "https://github.com/fspia-code/StockWallet#readme"
 }

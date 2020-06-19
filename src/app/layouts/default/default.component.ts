@@ -8,8 +8,8 @@ import { StockSymbol } from 'src/app/modules/models/stocksymbol';
   styleUrls: ['./default.component.scss']
 })
 export class DefaultComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error("Method not implemented.");
+  ngOnInit() {
+    
   }
 
   @ViewChild(StockbodyComponent) stockbody: StockbodyComponent;
